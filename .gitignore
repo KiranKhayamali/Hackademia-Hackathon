@@ -1,3 +1,4 @@
 myenv
 venv
 env/
+group/__pycache__/
