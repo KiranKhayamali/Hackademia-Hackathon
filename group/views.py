@@ -107,5 +107,12 @@ class teacher_form_view(View):
             "page_name":"teacher signup"
         }
         return render(request,'teacher.html',context)  
+    
+class student_form_view(View):
+    def get(self, request):
+        context = {
+            "page_name" : "student signup"
+        }
+        return render(request, 'student.html', context)
 
 # login and sign up related views
