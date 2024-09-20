@@ -13,4 +13,7 @@ import random
 def index(request):
         return render (request,"index.html")
 
+def teacher_form(request):
+        return render(request, "teacher.html")
+
 # login and sign up related views

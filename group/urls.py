@@ -6,5 +6,6 @@ from group import views
     'name=' is used for reverse linking which is efficient for dynamic routing
 '''
 urlpatterns = [
-    path('', views.index, name='index'),
+    # path('', views.index, name='index'),
+    path('', views.teacher_form, name='teacher_form'),
 ]
