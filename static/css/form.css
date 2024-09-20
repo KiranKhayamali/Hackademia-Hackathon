@@ -177,6 +177,25 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
+/* Ensure radio buttons are properly aligned with their labels */
+.form-check-input[type="radio"] {
+    width: auto;
+    height: auto;
+    margin-right: 10px;    /* Add some space between the radio button and the label */
+    vertical-align: middle; /* Align the radio button with the text */
+}
+
+.form-check-label {
+    vertical-align: middle; /* Align the label with the radio button */
+    font-weight: bold;      /* Optional: make the label bold */
+}
+
+/* Optional: Add some spacing between the radio button groups */
+.form-check {
+    margin-bottom: 10px;    /* Add space between radio button options */
+}
+
+
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateX(-20px); }
@@ -207,49 +226,49 @@ body {
 
 /* for teacher.html */
 
-/* Ensure the body and HTML take the full height of the viewport */
+
 body, html {
     height: 100%;
     margin: 0;
 }
 
-/* Center the entire form container */
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    background-color: #f0f4f8; /* Optional background */
+    height: 100vh; 
+    background-color: #f0f4f8; 
 }
 
 .skill-selection {
-    background-color: #ffffff; /* White background for form */
+    background-color: #ffffff; 
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     width: 100%;
     max-width: 500px;
     text-align: center;
 }
 
 .checkboxes-section {
-    text-align: left; /* Ensure this section is left-aligned */
-    margin: 20px 0;   /* Add margin for spacing */
+    text-align: left; 
+    margin: 20px 0;   
 }
 
 .checkboxes-section label {
     display: inline-block;
     font-weight: bold;
     margin: 10px 5px 10px 0;
-    vertical-align: middle; /* Align checkbox with label text */
+    vertical-align: middle; 
 }
 
 .checkboxes-section input[type="checkbox"] {
-    vertical-align: middle; /* Align checkbox with label */
+    vertical-align: middle; 
     margin-right: 10px;
 }
 
-/* Style for the project title input */
+
 .skill-selection label[for="project-title"],
 .skill-selection input[type="text"] {
     display: block;
@@ -273,21 +292,21 @@ body, html {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Align the label with the checkbox */
+
 .skill-selection label {
     display: inline-block;
     font-weight: bold;
     margin: 10px 5px 10px 0;
     vertical-align: middle; 
-    text-align: left;     /* Align checkbox with label text */
+    text-align: left;    
 }
 
 .skill-selection input[type="checkbox"] {
-    vertical-align: middle; /* Align checkbox with label */
+    vertical-align: middle; 
     margin-right: 10px;
 }
 
-/* Center the submit button and add hover animation */
+
 .skill-selection input[type="button"] {
     display: block;
     width: 100%;
@@ -306,16 +325,16 @@ body, html {
 
 .skill-selection input[type="button"]:hover {
     background-color: #3aab55;
-    transform: translateY(-3px); /* Slight lift on hover */
+    transform: translateY(-3px);
 }
 
 .skill-selection input[type="button"]:active {
     background-color: #004494;
-    transform: translateY(0); /* Reset the transform on click */
+    transform: translateY(0); 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 600px) {
     .skill-selection {
         padding: 20px;
