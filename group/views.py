@@ -18,7 +18,10 @@ class Index(View):
         context = {
             "page_name":"Home"
         }
-        return render(request,'index.html',context)
+        if request.user.is_anonymous:
+            return redirect("/login")
+        else:
+            return render (request,"index.html",context)
       
 class Login_view(View):
     def get(self,request):
@@ -72,16 +75,16 @@ class Signup_View (View):
             username = request.POST.get('username')
             email = request.POST.get('email') #validation required
             password = request.POST.get('password')
-            status = request.POST.get('status')
+            status = request.POST.get('staff')
 
             #determine type of user
             if status == 'admin':
                 is_superuser = True 
                 is_staff = True
-            elif status == 'seller':
+            elif status == 'teacher':
                 is_superuser == False
                 is_staff = True
-            elif status =='customer':
+            elif status =='student':
                 is_staff = False
                 is_superuser = False
 
