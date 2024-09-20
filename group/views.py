@@ -221,17 +221,77 @@ class Signup_View(View):
             return redirect('/login')
 
 class teacher_form_view(View):
-    def get(self, request):
+    # def get(self, request):
+    #     context = {
+    #         "page_name":"teacher signup"
+    #     }
+    #     return render(request,'teacher.html',context)  
+    def get(self,request):
+        alert_title = request.session.get('alert_title',False)
+        alert_detail = request.session.get('alert_detail',False)
+        if(alert_title):del(request.session['alert_title'])
+        if(alert_detail):del(request.session['alert_detail'])
         context = {
+<<<<<<< HEAD
             "page_name": "teacher signup"
         }
         return render(request, 'teacher.html', context)
 
+=======
+            'alert_title':alert_title,
+            'alert_detail':alert_detail,
+            'page_name': 'Signup'
+        }
+        return render(request,"signup.html",context)
+        
+    def post(self,request):
+        if request.method == 'POST':
+            communication = request.POST.get('communication')
+            presentation = request.POST.get('presentation')
+            coding = request.POST.get('coding')
+            leadership = request.POST.get('leadership')
+            Skillset = Skillset.objects.create(
+                communication=communication,
+                presentation = presentation,
+                coding = coding,
+                leadership = leadership,
+            )
+            Skillset.save() 
+        return redirect ('/')  
+    
+>>>>>>> 3fc2f1e5a8ddfc0667fae9230dad3bef47797260
 class student_form_view(View):
-    def get(self, request):
+    '''def get(self, request):
         context = {
             "page_name": "student signup"
         }
-        return render(request, 'student.html', context)
+        return render(request, 'student.html', context)'''
+    
+    def get(self,request):
+        alert_title = request.session.get('alert_title',False)
+        alert_detail = request.session.get('alert_detail',False)
+        if(alert_title):del(request.session['alert_title'])
+        if(alert_detail):del(request.session['alert_detail'])
+        context = {
+            'alert_title':alert_title,
+            'alert_detail':alert_detail,
+            'page_name': 'student form'
+        }
+        return render(request,"student.html",context)
+        
+    def post(self,request):
+        if request.method == 'POST':
+            communication = request.POST.get('communication')
+            presentation = request.POST.get('presentation')
+            coding = request.POST.get('coding')
+            leadership = request.POST.get('leadership')
+            Skillsets = Skillset.objects.create(
+                communication=communication,
+                presentation = presentation,
+                coding = coding,
+                leadership = leadership,
+            )
+            Skillsets.save() 
+        return redirect ('/')  
 
 # login and signup related views
