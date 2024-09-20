@@ -1,0 +1,34 @@
+{% extends "base.html"%}
+{% block body%}
+
+    <div class="container">
+    <div class="skill-level">
+        <form>
+            <label for="coding">Coding : 0</label>
+            <input type="range" min="0" max="100" value="50">
+            <output for="coding">100</output><br>
+
+            <label for="leadership">Leadership : 0</label>
+            <input type="range" min="0" max="100" value="50">
+            <output for="leadership">100</output><br>
+
+            <label for="communication">Communication skill : 0</label>
+            <input type="range" min="0" max="100" value="50">
+            <output for="communication">100</output><br>
+
+            <label for="presentation">Presentation Designing : 0</label>
+            <input type="range" min="0" max="100" value="50">
+            <output for="presentation">100</output><br>
+
+            <label for="document">Document Writing : 0</label>
+            <input type="range" min="0" max="100" value="50">
+            <output for="document">100</output><br>
+
+            <label for="research">Research</label>
+            <input type="range" min="0" max="100" value="50">
+            <output for="research">100</output><br>
+        </form>
+    </div>
+    </div>
+
+{% endblock body%}
