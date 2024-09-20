@@ -11,25 +11,30 @@
 <body>
     <div class="container">
 
-        <h2>Personal Details</h2>
-        <div>
-            <form name="userForm" onsubmit="return validateForm()">
-
+        <!-- Personal Details Section -->
+        <div class="personal-details">
+            <h2>Personal Details</h2>
+            <form name="userForm" onsubmit="return validateForm(event)">
                 <label for="firstname">First Name</label>
-                <input type="text" id="firstname" name="firstname" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="Your Name..">
+                <input type="text" id="firstname" name="firstname" placeholder="Your Name..">
                 <span id="firstnameError"></span><br /><br />
 
                 <label for="lastname">Last Name</label>
-                <input type="text" id="lastname" name="lastname" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="Your Surname..">
+                <input type="text" id="lastname" name="lastname" placeholder="Your Surname..">
                 <span id="lastnameError"></span><br /><br />
 
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" onfocus="changeBgd(this)" onblur="resetBgd(this)" placeholder="email@emailaddress.com..">
+                <input type="text" id="email" name="email" placeholder="email@emailaddress.com..">
                 <span id="emailError"></span><br /><br />
+            </form>
+        </div>
 
-                <h2>Upload CSV File</h2>
+        <!-- Upload CSV Section -->
+        <div class="upload-section">
+            <h2>Upload CSV File</h2>
+            <form>
                 <label for="csvfile">CSV File</label>
-                <input type="file" id="csvfile" name="csvfile" accept=".csv" onfocus="changeBgd(this)" onblur="resetBgd(this)">
+                <input type="file" id="csvfile" name="csvfile" accept=".csv">
                 <span id="csvError"></span><br /><br />
 
                 <input type="submit" value="Submit">
@@ -38,7 +43,7 @@
             </form>
         </div>
     </div>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script language="JavaScript" type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>
