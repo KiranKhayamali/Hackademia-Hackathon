@@ -42,7 +42,7 @@ class Login_view(View):
         user = authenticate(username = username, password = password)
         if user is not None:# checks if the user is logged in or not?
             login(request,user) #logins the user
-            return redirect ('/login')
+            return redirect ('/')
         else:
             request.session['alert_title'] = "Invalid Login Attempt"
             request.session['alert_detail'] = "Please enter valid login credential."
@@ -117,7 +117,7 @@ class teacher_form_view(View):
             'alert_detail':alert_detail,
             'page_name': 'Signup'
         }
-        return render(request,"signup.html",context)
+        return render(request,"teacher-form.html",context)
         
     def post(self,request):
         if request.method == 'POST':
@@ -149,23 +149,24 @@ class student_form_view(View):
         context = {
             'alert_title':alert_title,
             'alert_detail':alert_detail,
-            'page_name': 'student form'
+            'page_name': 'student-form'
         }
-        return render(request,"student.html",context)
+        return render(request,"student-form.html",context)
         
     def post(self,request):
         if request.method == 'POST':
+            user_id = request.user.id 
             communication = request.POST.get('communication')
             presentation = request.POST.get('presentation')
             coding = request.POST.get('coding')
             leadership = request.POST.get('leadership')
-            Skillsets = Skillset.objects.create(
-                communication=communication,
-                presentation = presentation,
+            skillsets = Skillset.objects.create(
+                user_id = user_id,
                 coding = coding,
                 leadership = leadership,
-            )
-            Skillsets.save() 
+                communication=communication,
+                presentation = presentation,
+            ).save() 
         return redirect ('/')  
 
 # login and sign up related views
