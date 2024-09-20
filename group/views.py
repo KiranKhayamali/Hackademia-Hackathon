@@ -101,7 +101,6 @@ class Signup_View (View):
                 login(request,user) #logins the user
             return redirect ('/')  
 
-
 class teacher_form_view(View):
     def get(self, request):
         context = {
