@@ -177,6 +177,25 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
+/* Ensure radio buttons are properly aligned with their labels */
+.form-check-input[type="radio"] {
+    width: auto;
+    height: auto;
+    margin-right: 10px;    /* Add some space between the radio button and the label */
+    vertical-align: middle; /* Align the radio button with the text */
+}
+
+.form-check-label {
+    vertical-align: middle; /* Align the label with the radio button */
+    font-weight: bold;      /* Optional: make the label bold */
+}
+
+/* Optional: Add some spacing between the radio button groups */
+.form-check {
+    margin-bottom: 10px;    /* Add space between radio button options */
+}
+
+
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateX(-20px); }
