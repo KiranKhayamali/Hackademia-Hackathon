@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -41,4 +41,59 @@
     <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="assets/css/style.css" >
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Select Role to Login</h2>
+    <select id="role-select">
+        <option value="" disabled selected>Select your role</option>
+        <option value="teacher">Login as Teacher</option>
+        <option value="student">Login as Student</option>
+    </select>
+    <button onclick="showForm()">Proceed</button>
+</div>
+
+<div id="teacher-form" class="form-container" style="display:none;">
+    <h2>Teacher Form</h2>
+    <form method="POST" action="{% url 'teacher_form' %}">
+        {% csrf_token %}
+        <label for="teacher-fullname">Full Name:</label>
+        <input type="text" id="teacher-fullname" name="fullname" placeholder="Enter full name" required>
+        
+        <label for="teacher-email">Email:</label>
+        <input type="email" id="teacher-email" name="email" placeholder="Enter email" required>
+        
+        <label for="teacher-project">Project Title:</label>
+        <input type="text" id="teacher-project" name="project" placeholder="Enter project title" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div id="student-form" class="form-container" style="display:none;">
+    <h2>Student Form</h2>
+    <form method="POST" >
+        {% csrf_token %}
+        <label for="student-fullname">Full Name:</label>
+        <input type="text" id="student-fullname" name="fullname" placeholder="Enter full name" required>
+        
+        <label for="student-email">Email:</label>
+        <input type="email" id="student-email" name="email" placeholder="Enter email" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="assets/js/script.js"></script>
+</body>
 </html>

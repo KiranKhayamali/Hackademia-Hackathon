@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Student Form</h2>
+    <form method="POST" action="{% url 'student_form' %}">
+        {% csrf_token %}
+        <label for="student-fullname">Full Name:</label>
+        <input type="text" id="student-fullname" name="fullname" placeholder="Enter full name" required>
+        
+        <label for="student-email">Email:</label>
+        <input type="email" id="student-email" name="email" placeholder="Enter email" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
