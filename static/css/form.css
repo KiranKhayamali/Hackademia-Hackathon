@@ -177,12 +177,12 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* Ensure radio buttons are properly aligned with their labels */
+
 .form-check-input[type="radio"] {
     width: auto;
     height: auto;
-    margin-right: 10px;    /* Add some space between the radio button and the label */
-    vertical-align: middle; /* Align the radio button with the text */
+    margin-right: 10px;    
+    vertical-align: middle; 
 }
 
 .form-check-label {
@@ -190,7 +190,6 @@ body {
     font-weight: bold;      /* Optional: make the label bold */
 }
 
-/* Optional: Add some spacing between the radio button groups */
 .form-check {
     margin-bottom: 10px;    /* Add space between radio button options */
 }
@@ -342,5 +341,124 @@ body, html {
 
     .skill-selection input[type="button"] {
         max-width: 100%;
+    }
+}
+
+
+/* for student */
+
+/* Container styling to center content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: var(--color-one);
+}
+
+/* Skill Level Form styling */
+.skill-level {
+    background-color: var(--color-three);
+    padding: var(--spacing-large);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Label styling for sliders */
+.skill-level label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: var(--spacing-small);
+    color: var(--color-two);
+}
+
+/* Slider input styling */
+.skill-level input[type="range"] {
+    width: 100%;
+    margin-bottom: var(--spacing-medium);
+    appearance: none;
+    height: 10px;
+    background-color: var(--color-bgd);
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Slider handle (thumb) styling */
+.skill-level input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-four);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Slider handle hover and active states */
+.skill-level input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: var(--color-primary);
+    transform: scale(1.1);
+}
+
+.skill-level input[type="range"]::-webkit-slider-thumb:active {
+    background-color: var(--color-primary);
+    transform: scale(1.2);
+}
+
+/* Display value below each slider */
+.slider-value {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-two);
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Submit button styling */
+.skill-level input[type="submit"] {
+    background-color: var(--color-four);
+    color: var(--color-three);
+    font-size: 1.2em;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    padding: var(--spacing-small);
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Submit button hover and active states */
+.skill-level input[type="submit"]:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.skill-level input[type="submit"]:active {
+    background-color: var(--color-primary);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .skill-level {
+        padding: var(--spacing-medium);
+        width: 90%;
+    }
+
+    .skill-level input[type="submit"] {
+        font-size: 1em;
     }
 }
