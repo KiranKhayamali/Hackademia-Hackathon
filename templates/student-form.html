@@ -5,6 +5,7 @@
     <div class="skill-level">
         <form action="/student-form" method="POST">
             {% csrf_token %}
+            <h2>Rate yourself</h2>
             <label for="coding">Coding : 0</label>
             <input type="range" name="coding" min="0" max="100" value="50" oninput="updateValue('valueDisplay1', this.value)">
             <div class="slider-value">
@@ -29,23 +30,7 @@
                  Value: <span id="valueDisplay4">50</span>
             </div><br>
 
-<<<<<<< HEAD
-            <label for="document">Document Writing : 0</label>
-            <input type="range" min="0" max="100" value="50" oninput="updateValue('valueDisplay5', this.value)">
-            <div class="slider-value">
-                 Value: <span id="valueDisplay5">50</span>
-            </div><br>
-
-            <label for="research">Research</label>
-            <input type="range" min="0" max="100" value="50" oninput="updateValue('valueDisplay6', this.value)">
-            <div class="slider-value">
-                 Value: <span id="valueDisplay6">50</span>
-            </div><br>
-
-            <input type="button" id="submit" name="submit" value="Submit">
-=======
             <input type="submit" id="submit" name="submit" value="Submit">
->>>>>>> 3fc2f1e5a8ddfc0667fae9230dad3bef47797260
         </form>
     </div>
     </div>

@@ -232,12 +232,6 @@ class teacher_form_view(View):
         if(alert_title):del(request.session['alert_title'])
         if(alert_detail):del(request.session['alert_detail'])
         context = {
-<<<<<<< HEAD
-            "page_name": "teacher signup"
-        }
-        return render(request, 'teacher.html', context)
-
-=======
             'alert_title':alert_title,
             'alert_detail':alert_detail,
             'page_name': 'Signup'
@@ -259,7 +253,6 @@ class teacher_form_view(View):
             Skillset.save() 
         return redirect ('/')  
     
->>>>>>> 3fc2f1e5a8ddfc0667fae9230dad3bef47797260
 class student_form_view(View):
     '''def get(self, request):
         context = {
