@@ -236,7 +236,7 @@ class teacher_form_view(View):
             'alert_detail':alert_detail,
             'page_name': 'Signup'
         }
-        return render(request,"signup.html",context)
+        return render(request,"teacher.html",context)
         
     def post(self,request):
         if request.method == 'POST':
