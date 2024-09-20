@@ -51,6 +51,7 @@ class Logout_view(View):
         logout(request)
         return redirect('/')
 
+<<<<<<< HEAD
 
 class Signup_View (View):
     def get(self,request):
@@ -97,3 +98,9 @@ class Signup_View (View):
             if user is not None:# checks if the user is logged in or not?
                 login(request,user) #logins the user
             return redirect ('/')  
+=======
+def teacher_form(request):
+        return render(request, "teacher.html")
+
+# login and sign up related views
+>>>>>>> dd1e9d80a9d48b0a7e0e04fd22c9eaa89cfa01ef
