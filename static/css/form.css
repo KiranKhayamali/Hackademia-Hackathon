@@ -76,10 +76,9 @@
     --spacing-large: 2em;
 }
 
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Global Styles */
+
 body {
     font-family: var(--font-family);
     background-color: var(--color-one);
@@ -91,7 +90,7 @@ body {
     height: 100vh;
 }
 
-/* Alert Styles */
+
 .alert {
     display: flex;
     align-items: center;
@@ -111,7 +110,7 @@ body {
     margin-right: var(--spacing-small);
 }
 
-/* Form Container */
+
 .form {
     background-color: var(--color-three);
     color: var(--color-two);
@@ -215,8 +214,6 @@ body {
     margin-right: 0.5rem;
     accent-color: var(--accent-color); /* Optional: customize the radio button color */
 }
-
-
 
 /* base.css */
 .container {
