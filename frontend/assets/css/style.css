@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -24,4 +25,158 @@ body {
     background-color: #4CAF50;
     color: white;
     border: none;
+=======
+/* Reset styling for common HTML elements */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Container styling */
+.container {
+    background-color: #0c1d65;
+    position: relative;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    top: 0;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Personal Details Section Styling */
+.personal-details {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.personal-details h2 {
+    color: #19d653;
+    font-size: 150%;
+    margin-bottom: 15px;
+}
+
+/* Upload CSV Block Styling */
+.upload-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.upload-section h2 {
+    color: #19d653;
+    font-size: 150%;
+    margin-bottom: 15px;
+}
+
+/* Form input styling */
+input[type=text],
+select,
+input[type=file] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Submit button styling */
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 150%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* General link styling */
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: white;
+    font-size: 100%;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+>>>>>>> 8aaf402d943bb2e4098ce64be21d45a30a9a5248
 }
