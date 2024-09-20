@@ -29,9 +29,9 @@ class Login_view(View):
         context = {
             'alert_title': alert_title,
             'alert_detail': alert_detail,
-            'page_name': 'Login'
+            'page_name': 'login'
         }
-        return render(request,"login.html",context)
+        return render(request,"signin.html",context)
     
     def post(self,request):
         username = request.POST.get("username")
@@ -39,7 +39,7 @@ class Login_view(View):
         user = authenticate(username = username, password = password)
         if user is not None:# checks if the user is logged in or not?
             login(request,user) #logins the user
-            return redirect ('/dashboard')
+            return redirect ('/login')
         else:
             request.session['alert_title'] = "Invalid Login Attempt"
             request.session['alert_detail'] = "Please enter valid login credential."
