@@ -1,4 +1,4 @@
 myenv
 venv
 env/
-group/__pycache__/
+__pycache__/

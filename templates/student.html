@@ -3,7 +3,8 @@
 
     <div class="container">
     <div class="skill-level">
-        <form>
+        <form method="POST">
+            {% csrf_token %}
             <label for="coding">Coding : 0</label>
             <input type="range" min="0" max="100" value="50" oninput="updateValue('valueDisplay1', this.value)">
             <div class="slider-value">
@@ -28,19 +29,7 @@
                 Slider Value: <span id="valueDisplay4">50</span>
             </div><br>
 
-            <label for="document">Document Writing : 0</label>
-            <input type="range" min="0" max="100" value="50" oninput="updateValue('valueDisplay5', this.value)">
-            <div class="slider-value">
-                Slider Value: <span id="valueDisplay5">50</span>
-            </div><br>
-
-            <label for="research">Research</label>
-            <input type="range" min="0" max="100" value="50" oninput="updateValue('valueDisplay6', this.value)">
-            <div class="slider-value">
-                Slider Value: <span id="valueDisplay6">50</span>
-            </div><br>
-
-            <input type="button" id="submit" name="submit" value="Submit">
+            <input type="submit" id="submit" name="submit" value="Submit">
         </form>
     </div>
     </div>
