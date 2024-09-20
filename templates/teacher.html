@@ -1,21 +1,9 @@
 {% extends "base.html" %}
 {% block body %}
         <div class="container">
-            <div class="personal-details">
-                <h2>Personal Details</h2>
+            <div class="skill-selection">
+                <h2>Skill Selection for the project</h2>
                 <form name="userForm" onsubmit="return validateForm(event)">
-                    <label for="firstname">First Name :</label>
-                    <input type="text" id="firstname" name="firstname" placeholder="Your Name..">
-                    <span id="firstnameError"></span><br /><br />
-    
-                    <label for="lastname">Last Name :</label>
-                    <input type="text" id="lastname" name="lastname" placeholder="Your Lastname..">
-                    <span id="lastnameError"></span><br /><br />
-    
-                    <label for="email">Email :</label>
-                    <input type="text" id="email" name="email" placeholder="email@emailaddress.com..">
-                    <span id="emailError"></span><br /><br />
-
                     <label for="coding">Coding :</label>
                     <input type="checkbox" id="coding" name="coding"><br /><br />
 
@@ -25,8 +13,10 @@
                     <label for="communication">Communication Skills :</label>
                     <input type="checkbox" id="communication" name="communication"><br /><br />
 
-                    <label for="presentation">Presentation Designing</label>
+                    <label for="presentation">Presentation Designing :</label>
                     <input type="checkbox" id="pres :entation" name="presentation"><br /><br />
+
+                    <input type="button" id="submit" name="submit" value="Submit">
 
 
                 </form>
