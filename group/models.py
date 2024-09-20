@@ -14,11 +14,11 @@ class BaseModel(models.Model):
         abstract=True
 
 class Skillset(BaseModel):
-    id = models.ForeignKey(User, on_delete=models.CASCADE,default=00)
+    user = models.ForeignKey(User, on_delete=models.CASCADE,default=00)
     coding = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
     leadership = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
     communication = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
     presentation = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
     
-    def __str__(self):
-        return self.id
+    # def __str__(self):
+    #     return self.id
