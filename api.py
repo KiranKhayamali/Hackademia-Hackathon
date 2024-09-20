@@ -1,13 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, conlist
-from sklearn.preprocessing import StandardScaler
 import joblib
-from sklearn.preprocessing import StandardScaler
 import numpy as np
 from fastapi.middleware.cors import CORSMiddleware
+from sklearn.cluster import KMeans
 
 app = FastAPI()
-
 
 #adding CORS
 app.add_middleware(
