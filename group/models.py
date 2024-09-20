@@ -1,7 +1,5 @@
 
 
-# Create your models here.
-
 from django.db import models
 from django.core.validators import validate_email
 from django.contrib.auth.models import User
@@ -21,7 +19,6 @@ import uuid
 #     def __str__(self):
 #         return self.fname
 
-# learning about the quiz app
 class BaseModel(models.Model):
     uid=models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
     created_at=models.DateField(auto_now_add=True)
